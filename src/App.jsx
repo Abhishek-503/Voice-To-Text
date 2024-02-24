@@ -6,6 +6,7 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import SpeechRecognitionPage from "./components/pages/SpeechRecognitionPage";
 import IOT from "./components/pages/IOT";
+import SpeechComponent from "./components/pages/SpeechComponent";
 
 function App() {
   const current_theme = localStorage.getItem("current_theme");
@@ -20,8 +21,8 @@ function App() {
         <Navbar theme={theme} setTheme={setTheme} />
 
         <Routes>
-          <Route exact path="/home" element={<Home />} />
-          <Route exact path="/speechToText" element={<SpeechRecognitionPage />} />
+          <Route index exact path="/" element={<Home />} />
+          <Route exact path="/speechToText" element={<SpeechComponent />} />
           <Route exact path="/IOT" element={<IOT />} />
           <Route path="/about" element={<About />} />
         </Routes>
