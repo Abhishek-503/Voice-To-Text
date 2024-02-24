@@ -26,7 +26,7 @@ const toggle_mode = ()=>{
               <Link to="/IOT">IOT</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about">About Us</Link>
             </li>
         </ul>
 

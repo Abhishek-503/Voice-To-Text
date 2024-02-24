@@ -67,7 +67,7 @@ const About = () => {
             <img src={developer.imageUrl} alt={developer.name} className="profile-image" />
             <h3>{developer.name}</h3>
             <p>{developer.role}</p>
-            <p class='bio'>{showFullBio ? developer.bio : developer.bio.slice(0, 100)} 
+            <p>{showFullBio ? developer.bio : developer.bio.slice(0, 100)} 
               {developer.bio.length > 100 && (
                 <span className="read-more" onClick={toggleBio}>
                   {showFullBio ? " ...read less" : " ...read more"}

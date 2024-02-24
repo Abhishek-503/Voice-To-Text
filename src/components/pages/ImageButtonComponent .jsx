@@ -9,7 +9,7 @@ const ImageButtonComponent = () => {
   const handleClick = async () => {
     setIsLoading(true);
     setError(null);
-
+    setResponseData("")
     try {
       const response = await fetch('http://127.0.0.1:8000/audio_to_text/');
       if (!response.ok) {
@@ -27,6 +27,7 @@ const ImageButtonComponent = () => {
 
   return (
     <div className="image-button-container">
+      <h1>Speech to Text</h1><br/>
       <button className="image-button" onClick={handleClick} disabled={isLoading}>
         {isLoading ? 'Loading...' : <img className="img-class" src="src/assets/microphone.png" alt="Button" />}
       </button>
